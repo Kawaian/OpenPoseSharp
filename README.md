@@ -3,5 +3,5 @@ A C# port of the [OpenPose library](https://github.com/CMU-Perceptual-Computing-
 
 ## Features
 - [ ] Port to **Torch**
-- [ ] **C#** Supports
-- [ ] **Xamarin** Supports
+- [ ] **C#** Support
+- [ ] **Xamarin** Support
