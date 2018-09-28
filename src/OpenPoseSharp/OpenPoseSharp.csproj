@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{411EE273-4008-4468-8035-BAD396DDB691}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OpenPoseSharp</RootNamespace>
+    <AssemblyName>OpenPoseSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\swig\genSwig\ElementToRender.cs">
+      <Link>gen\ElementToRender.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\genSwig\FloatArray.cs">
+      <Link>gen\FloatArray.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\genSwig\FloatArray2Array.cs">
+      <Link>gen\FloatArray2Array.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\genSwig\FloatPoint.cs">
+      <Link>gen\FloatPoint.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\genSwig\FloatRectangle2Array.cs">
+      <Link>gen\FloatRectangle2Array.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\genSwig\FloatRectangle2ArrayList.cs">
+      <Link>gen\FloatRectangle2ArrayList.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\genSwig\HandExtractorCaffe.cs">
+      <Link>gen\HandExtractorCaffe.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\genSwig\HandExtractorNet.cs">
+      <Link>gen\HandExtractorNet.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\genSwig\HeatMapType.cs">
+      <Link>gen\HeatMapType.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\genSwig\HeatMapTypeList.cs">
+      <Link>gen\HeatMapTypeList.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\genSwig\IntList.cs">
+      <Link>gen\IntList.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\genSwig\IntPoint.cs">
+      <Link>gen\IntPoint.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\genSwig\OpenPose.cs">
+      <Link>gen\OpenPose.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\genSwig\OpenPosePINVOKE.cs">
+      <Link>gen\OpenPosePINVOKE.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\genSwig\Rectangle.cs">
+      <Link>gen\Rectangle.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\genSwig\RenderMode.cs">
+      <Link>gen\RenderMode.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\genSwig\ScaleMode.cs">
+      <Link>gen\ScaleMode.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\genSwig\SWIGTYPE_p_cv__Mat.cs">
+      <Link>gen\SWIGTYPE_p_cv__Mat.cs</Link>
+    </Compile>
+    <Compile Include="..\swig\genSwig\SWIGTYPE_p_float.cs">
+      <Link>gen\SWIGTYPE_p_float.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\external\openpose\build\bin\boost_chrono-vc140-mt-1_61.dll">
+      <Link>boost_chrono-vc140-mt-1_61.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\boost_filesystem-vc140-mt-1_61.dll">
+      <Link>boost_filesystem-vc140-mt-1_61.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\boost_python-vc140-mt-1_61.dll">
+      <Link>boost_python-vc140-mt-1_61.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\boost_system-vc140-mt-1_61.dll">
+      <Link>boost_system-vc140-mt-1_61.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\boost_system-vc140-mt-gd-1_61.dll">
+      <Link>boost_system-vc140-mt-gd-1_61.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\boost_thread-vc140-mt-1_61.dll">
+      <Link>boost_thread-vc140-mt-1_61.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\caffe.dll">
+      <Link>caffe.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\caffehdf5.dll">
+      <Link>caffehdf5.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\caffehdf5_hl.dll">
+      <Link>caffehdf5_hl.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\caffezlib1.dll">
+      <Link>caffezlib1.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\cublas64_80.dll">
+      <Link>cublas64_80.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\cudart64_80.dll">
+      <Link>cudart64_80.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\cudnn64_5.dll">
+      <Link>cudnn64_5.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\curand64_80.dll">
+      <Link>curand64_80.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\gflags.dll">
+      <Link>gflags.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\gflagsd.dll">
+      <Link>gflagsd.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\glog.dll">
+      <Link>glog.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\glogd.dll">
+      <Link>glogd.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\libgcc_s_seh-1.dll">
+      <Link>libgcc_s_seh-1.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\libgfortran-3.dll">
+      <Link>libgfortran-3.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\libopenblas.dll">
+      <Link>libopenblas.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\libquadmath-0.dll">
+      <Link>libquadmath-0.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\opencv_core310.dll">
+      <Link>opencv_core310.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\opencv_ffmpeg310_64.dll">
+      <Link>opencv_ffmpeg310_64.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\opencv_imgcodecs310.dll">
+      <Link>opencv_imgcodecs310.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\opencv_imgproc310.dll">
+      <Link>opencv_imgproc310.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\opencv_world310.dll">
+      <Link>opencv_world310.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\opencv_world310d.dll">
+      <Link>opencv_world310d.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\python27.dll">
+      <Link>python27.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\bin\VCRUNTIME140.dll">
+      <Link>VCRUNTIME140.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\external\openpose\build\x64\Release\openpose.dll">
+      <Link>openpose.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
